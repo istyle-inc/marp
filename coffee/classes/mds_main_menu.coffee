@@ -176,7 +176,8 @@ module.exports = class MdsMainMenu
           role: 'help'
           submenu: [
             { label: 'Visit Marp &Website', click: -> shell.openExternal('https://yhatt.github.io/marp/') }
-            { label: '&Release Notes', click: -> shell.openExternal('https://github.com/yhatt/marp/releases') }
+            { label: '&Original Release Notes', click: -> shell.openExternal('https://github.com/yhatt/marp/releases') }
+            { label: '&istyle-inc Release Notes', click: -> shell.openExternal('https://github.com/istyle-inc/marp/releases') }
             { type: 'separator' }
             {
               label: 'Open &Examples'
@@ -195,6 +196,15 @@ module.exports = class MdsMainMenu
                   click: (item, w) ->
                     MdsWindow.loadFromFile(
                       path.join(__dirname, '../../examples/gaia.md'),
+                      w?.mdsWindow, { ignoreRecent: true }
+                    )
+                }
+                { type: 'separator' }
+                {
+                  label: '&istyle-inc theme',
+                  click: (item, w) ->
+                    MdsWindow.loadFromFile(
+                      path.join(__dirname, '../../examples/istyle-inc.md'),
                       w?.mdsWindow, { ignoreRecent: true }
                     )
                 }
