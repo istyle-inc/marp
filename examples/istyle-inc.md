@@ -1,24 +1,25 @@
+<!-- $size: 16:9 -->
 <!-- $theme: istyle-inc -->
+<!-- *template: title -->
 
-# Introducing ==Gaia== theme
+# Introducing ==istyle-inc== theme
 
-#### Marp's new slide theme
+#### Marp's custom slide theme
 
-###### Created by [Yuki Hattori (@yhatt)](https://github.com/yhatt)
+###### Created by [@kubotak-is](https://github.com/kubotak-is)
 
 ---
 <!-- *template: invert -->
 
-> In Greek mythology, **Gaia** also spelled **Gaea**, was the personification of the Earth and one of the Greek primordial deities.
+> ＠cosme（アットコスメ）は、コスメ・美容の総合情報サイト。クチコミだけでなく、美容に関するブログなど、コスメ・美容に関するソーシャルサイトとして1999年12月サービス開始[1]。株式会社アイスタイルが運営している。
 >
-> <small>-- *[Gaia (mythology) - Wikipedia, the free encyclopedia](https://en.wikipedia.org/wiki/Gaia_%28mythology%29)*</small>
+> <small>-- *[@cosme - Wikipedia](https://ja.wikipedia.org/wiki/@cosme)*</small>
 
 ---
-<!-- page_number: true -->
 
 # Overview
 
-**Gaia** is the beautiful presentation theme on Marp!
+**istyle-inc.theme** is the beautiful presentation theme on Marp!
 
 - ==**New features**==
 	1. Title Slides
@@ -31,14 +32,14 @@
 
 #### From menu
 
-Select menu: *View :arrow_right: Theme :arrow_right: Gaia*
+Select menu: *View :arrow_right: Theme :arrow_right: Gaia :arrow_right: istyle-inc*
 
 #### Use directive
 
-Set `gaia` theme by `$theme` Global Directive.
+Set `istyle-inc` theme by `$theme` Global Directive.
 
 ```
-<!-- $theme: gaia -->
+<!-- $theme: istyle-inc -->
 ```
 
 ---
@@ -92,7 +93,7 @@ document.write('Hello, world!');
 > Apply vertical centering to quote only page too.
 
 ---
-<!-- *template: gaia -->
+<!-- *template: istyle-inc -->
 
 # ==2.== Highlight
 
@@ -110,35 +111,23 @@ You can use `==` for ==highlighting blue==.
 *Marp would show <span style="background-color:yellow;">yellow marker highlight</span> in Markdown view or default slide theme.*
 
 ---
-<!-- *template: gaia -->
+<!-- *template: istyle-inc -->
 
 # ==3.== Color scheme templates
+
 ---
+<!-- *template: end -->
 # ==Color== scheme templates
 
 Change color scheme *by `template` page directive.*
 
 ```
-<!-- template: default -->
-```
-
-- **Default** :arrow_left: This page
-- Invert
-- Gaia (Theme color)
-
----
-<!-- *template: invert -->
-# ==Color== scheme templates
-
-Change color scheme *by `template` page directive.*
-
-```
-<!-- template: invert -->
+<!-- template: title or end -->
 ```
 
 - Default
-- **Invert** :arrow_left: This page
-- Gaia (Theme color)
+- **end** :arrow_left: This page
+- istyle-inc (Theme color)
 
 ---
 <!-- *template: gaia -->
@@ -147,31 +136,25 @@ Change color scheme *by `template` page directive.*
 Change color scheme *by `template` page directive.*
 
 ```
-<!-- template: gaia -->
+<!-- template: istyle-inc -->
 ```
 
 - Default
-- Invert
-- **Gaia** (Theme color) :arrow_left: This page
+- end
+- **istyle-inc** (Theme color) :arrow_left: This page
 
 ---
-<!-- *template: invert -->
 
-# Templates can use<br />to ==per pages==!
-
-##### with using temporally page directive `<!-- *template: invert -->`
-
----
-<!-- template: gaia -->
+<!-- template: istyle-inc -->
 
 # ==That's all!==
 
-## Let's create beautiful slides<br />with ==Marp== + ==Gaia== theme!
+## Let's create beautiful slides<br />with ==Marp== + ==istyle-inc== theme!
 
 ---
+<!-- *template: end -->
+#### `<!-- $theme: istyle-inc -->` of Marp
 
-#### `<!-- $theme: gaia -->` of Marp
+###### [![](../images/marp.png)](https://github.com/istyle-inc/marp)
 
-###### [![](../images/marp.png)](https://yhatt.github.io/marp)
-
-#### https://yhatt.github.io/marp
+#### https://github.com/istyle-inc/marp

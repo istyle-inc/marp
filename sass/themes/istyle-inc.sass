@@ -8,15 +8,16 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,900);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,700);
 
-$bg-color: #fff8e1
-$text-color: #455a64
-$highlight-color: #0288d1
+$bg-color: #ffffff
+$text-color: #4dae8a
+$highlight-color: #716658
+$bg-url: url("../../images/themes/istyle-inc/bg.png")
 
-=color-template($bg, $text, $highlight)
+=color-template($bg, $text, $highlight, $bg-url)
   color: $text
 
   > .slide
-    background-color: $bg
+    background: $bg no-repeat center/100% $bg-url
 
   mark
     color: $highlight
@@ -25,12 +26,11 @@ $highlight-color: #0288d1
     color: $highlight
 
   code
-    background: rgba($text, .8)
+    background: rgba($highlight, .8)
     color: $bg
 
   pre
-    background-color: $text
-    background-image: linear-gradient(135deg, rgba(#000, 0), rgba(#000, .02) 50%, rgba(#fff, 0) 50%, rgba(#fff, .05))
+    background-color: $highlight
 
     code
       background: transparent
@@ -68,7 +68,6 @@ $highlight-color: #0288d1
 
   .slide_wrapper
     > .slide
-      background-image: linear-gradient(135deg, rgba(#000, 0), rgba(#000, .02) 50%, rgba(#fff, 0) 50%, rgba(#fff, .05))
       padding: calc(0.1px * var(--slide-height)) calc(0.08px * var(--slide-width))
 
     &.only-headings, &.only-blockquotes
@@ -86,17 +85,17 @@ $highlight-color: #0288d1
         text-align: center
 
     h1
-      font-size: 1.8em
-    h2
       font-size: 1.5em
-    h3
+    h2
       font-size: 1.4em
-    h4
+    h3
       font-size: 1.1em
-    h5
+    h4
       font-size: 1em
-    h6
+    h5
       font-size: 0.9em
+    h6
+      font-size: 0.8em
 
     // Styling
     mark
@@ -118,7 +117,7 @@ $highlight-color: #0288d1
         display: block
         margin: 0
         padding: 0.5em 0.75em
-        font-size: 0.7em
+        font-size: 0.5em
 
     ul, ol
       > li
@@ -160,10 +159,10 @@ $highlight-color: #0288d1
         border-width: 1px
         border-style: solid
 
-    +color-template($bg-color, $text-color, $highlight-color)
+    +color-template($bg-color, $text-color, $highlight-color, $bg-url)
 
-    &[data-template~="invert"]
-      +color-template($text-color, $bg-color, #4fc3f7)
+    &[data-template~="title"]
+      +color-template(#4dae8a, #ffffff, $highlight-color, url("../../images/themes/istyle-inc/main.png"))
 
-    &[data-template~="gaia"]
-      +color-template($highlight-color, $bg-color, #81d4fa)
+    &[data-template~="end"]
+      +color-template(#4dae8a, #ffffff, $highlight-color, url("../../images/themes/istyle-inc/end.png"))
