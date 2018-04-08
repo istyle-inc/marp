@@ -208,6 +208,15 @@ module.exports = class MdsMainMenu
                       w?.mdsWindow, { ignoreRecent: true }
                     )
                 }
+                { type: 'separator' }
+                {
+                  label: '&istyle-inc-v2 theme',
+                  click: (item, w) ->
+                    MdsWindow.loadFromFile(
+                      path.join(__dirname, '../../examples/istyle-inc-v2.md'),
+                      w?.mdsWindow, { ignoreRecent: true }
+                    )
+                }
               ]
             }
           ]
@@ -282,6 +291,13 @@ module.exports = class MdsMainMenu
               type: if @window? then 'radio' else 'normal'
               checked: @states.theme == 'istyle-inc'
               click: => @window.mdsWindow.send 'setTheme', 'istyle-inc' unless @window.mdsWindow.freeze
+            }
+            {
+              label: '&Istyle v2'
+              enabled: @window?
+              type: if @window? then 'radio' else 'normal'
+              checked: @states.theme == 'istyle-inc-v2'
+              click: => @window.mdsWindow.send 'setTheme', 'istyle-inc-v2' unless @window.mdsWindow.freeze
             }
           ]
 
